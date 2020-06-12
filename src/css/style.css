@@ -1,0 +1,168 @@
+html {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.gridcontainer {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 60px 1fr 40px;
+    grid-template-areas:
+        "header header header"
+        ". main ."
+        "footer footer footer";
+}
+
+.flexcontainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.topnavbar li {
+    display: inline;
+    margin: 8px;
+}
+
+.botnavbar li {
+    display: inline;
+    margin: 10px;
+}
+
+.topnavbar {
+    grid-area: header;
+    font-size: 13px;
+    align-items: center;
+    margin-top: 1px;
+}
+
+.topnavbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 15px;
+}
+
+
+.topnavleft {
+    justify-self: start;
+}
+
+.topnavright {
+    justify-self: end;
+}
+
+.fa-th {
+    vertical-align: middle;
+}
+
+.topnavright .fa-th {
+    font-size: 18px;
+}
+
+.maincontent {
+    grid-area: main;
+    justify-self: center;
+    align-self: start;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image {
+    padding-top: 138px;
+    padding-bottom: 25px;
+}
+
+.searchbar {
+    display: flex;
+    align-items: center;
+    border: 1px solid #d3d3d3;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.searchbar svg { 
+    width: 14px;
+    padding: 15px;
+    padding-right: 25px;
+}
+
+input {
+    width: 360px;
+    line-height: 1;
+    border: none;
+}
+
+input:focus {
+    border: none;
+    outline: none;
+}
+
+.fa-search {
+    color: #a3a3a3;
+    padding: 15px;
+}
+
+.searchbar:hover {
+    box-shadow: 0px 0px 1px 2px #d6d6d67a;
+}
+
+.btn1:hover, .btn2:hover {
+    border-color: #bdbdbd;
+    box-shadow: 0px 0px 0.5px 1px #d6d6d67a;
+}
+
+/*input {
+    width: 435px;
+    line-height: 3;
+    max-width: 100%;
+    border: 1px solid #808080;
+    border-radius: 25px;
+}*/
+
+.btn {
+    padding-top: 25px;
+}
+
+.btn1, .btn2  {
+    background-color: #f3f3f3;
+    border: 0.5px solid transparent;
+    color: #524e50;
+    padding: 9px 17px;
+    text-align: center;
+    border-radius: 4px;
+    margin: 4px;
+}
+
+.signbtn {
+    background-color: #4285F4;
+    border: 0.5px solid rgba(255, 255, 255, 0);
+    color: white;
+    padding: 7px 12px;
+    font-weight: bold;
+    margin-right: 7px;
+}
+
+.botnavbar {
+    grid-area: footer;
+    background: #F2F2F2;
+    border-top: 1px solid #E4E4E4;
+    align-items: center;
+    padding: 8px;
+    color: #717171;
+}
+
+.botnavleft {
+    justify-self: start;
+}
+
+.botnavright {
+    justify-self: end;
+}
+
+.botnavbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+}
+
