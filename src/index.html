@@ -13,9 +13,12 @@
 </head>
 
 <body class="gridcontainer">
+  <!-- Normalmente fazemos um elemento de tag <header> antes do conteúdo em si da página. Nesse caso, acredito que o topnavbar poderia ser, ao invés de uma div, um header. E por isso que é sempre melhor usar, no CSS, o nome da classe do que o elemento. Caso seja necessário, podemos alterar todas as tags do documento, e não temos que modificar o CSS, pois continuamos com a mesma classe. -->
+    <!-- <header class="topnavbar flexcontainer"> -->
   <div class="topnavbar flexcontainer">
     <ul class="topnavleft">
-      <li>About</li>
+      <!-- Como os <li> provavelmente vão ser links, seria bom você ter colocado a tag <a>, até porque, após colocar essa tag, você vai precisar alterar no CSS (a tag <a> é a mais chata, pois ela SEMPRE vem com estilos, e muitas vezes temos que colocar regras pra TIRAR esses estilos) -->
+      <li><!-- <a href="#" title="Clique para saber mais sobre o Boogle!"> -->About<!-- </a> --></li>
       <li>Store</li>
     </ul>
     <ul class="topnavright">
@@ -25,10 +28,14 @@
       <li><button class="signbtn">Sign in</button></li>
     </ul>
   </div>
+  <!-- </header> -->
 
   <div class="maincontent flexcontainer">
     <div class="image">
+      <!-- Quando for usar imagens importantes, tipo a logo, tenta sempre pegar do próprio site. Quando pegamos de outro site, caso o site esteja indisponível (pro exemplo, se der problema no servidor), ou tenha fechado, ou então a pessoa simplesmente resolveu apagar alguns posts antigos e apagou o post que estava a sua imagem, a sua imagem não vai aparecer. Quando pegamos a imagem que temos hospedada na pastinha ali, caso nosso servidor caia, a imagem vai cair, mas o site vai cair junto, então dificilmente vai acontecer de a imagem ficar indisponível. -->
       <img src="https://i.imgur.com/4tAp9CQ.png">
+      <!-- <img src="../img/Boogle.png" alt="Boogle"> -->
+      <!-- Outra coisa em relação a tag <img> é que o atributo alt é obrigatório. Ele se refere ao texto alternativo da imagem. A boa prática, no alt, é descrever a imagem para leitores de tela. Então no caso da imagem que está escrito "Boogle", o alt seria alt="Boogle" ou até mesmo alt="Logo do Boogle" -->
     </div>
     <div class="searchbar">
       <i class="fas fa-search"></i>
@@ -36,30 +43,22 @@
         <label for="search"></label>
         <input type="text" id="search" name="search">
       </form>
-      <svg version="1.1"
-        id="svg72699" xmlns:x="&ns_extend;" xmlns:i="&ns_ai;" xmlns:graph="&ns_graphs;" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg"
-        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 296.8 426.4"
-        style="enable-background:new 0 0 296.8 426.4;" xml:space="preserve">
-        <style type="text/css">
-          .st0{fill:#4285F4;}
-          .st1{fill:#34A853;}
-          .st2{fill:#EA4335;}
-          .st3{fill:#FBBC05;}
-        </style>
-        <path class="st0" d="M148.4,276.1L148.4,276.1c-35.2,0-63.7-28.5-63.7-63.7V63.7C84.7,28.5,113.2,0,148.4,0h0
-          c35.2,0,63.7,28.5,63.7,63.7v148.7C212.1,247.6,183.6,276.1,148.4,276.1z"/>
-        <rect x="127.2" y="348.5" class="st1" width="42.5" height="77.9"/>
-        <path class="st2" d="M254.8,213.2c-0.1,58.6-47.8,106.3-106.4,106.3c-29.4,0-56.1-12-75.4-31.4l-29.7,29.7
-          c26.9,26.9,64,43.6,105.1,43.6h0c81.9,0,148.3-66.4,148.4-148.3H254.8z"/>
+      <svg version="1.1" id="svg72699" xmlns:x="&ns_extend;" xmlns:i="&ns_ai;" xmlns:graph="&ns_graphs;" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 296.8 426.4" style="enable-background:new 0 0 296.8 426.4;" xml:space="preserve"><style type="text/css">.st0{fill:#4285F4;} .st1{fill:#34A853;}.st2{fill:#EA4335;} .st3{fill:#FBBC05;}</style>
+        <path class="st0" d="M148.4,276.1L148.4,276.1c-35.2,0-63.7-28.5-63.7-63.7V63.7C84.7,28.5,113.2,0,148.4,0h0 c35.2,0,63.7,28.5,63.7,63.7v148.7C212.1,247.6,183.6,276.1,148.4,276.1z"/><rect x="127.2" y="348.5" class="st1" width="42.5" height="77.9"/>
+        <path class="st2" d="M254.8,213.2c-0.1,58.6-47.8,106.3-106.4,106.3c-29.4,0-56.1-12-75.4-31.4l-29.7,29.7 c26.9,26.9,64,43.6,105.1,43.6h0c81.9,0,148.3-66.4,148.4-148.3H254.8z"/>
         <path class="st3" d="M73,288.1c-19.1-19.2-31-45.7-31-74.9H0C0,254,16.6,291,43.3,317.8L73,288.1z"/>
       </svg>
+      <!-- Eu juntei um pouco o SVG porque é uma prática que eu pessoalmente gosto de fazer. Normalmente eu colocaria até os <path> na mesma linha, mas nesse caso eu achei que ficaria melhor assim. -->
     </div>
     <div class="btn">
       <button class="btn1">Boogle Search</button>
       <button class="btn2">I'm Feeling Lucky</button>
+      <!-- Eu vi que você usou a tag <button> pra todos os botões do site. Não tá errado, mas a tag button normalmente serve pra quando vamos fazer o link via JavaScript, onde podemos colocar o evento onClick, quando vamos mexer só com CSS e HTML, costumamos usar a tag <a>, pois ela aceita o atributo href, que vai ser o endereço do link para onde queremos que o botão leve o usuário. -->
     </div>
   </div>
 
+  <!-- Aqui normalmente fazemos um elemento de tag <footer> depois do conteúdo principal da página. Aqui, acredito que o botnavbar poderia ser, ao invés de uma div, um footer. -->
+    <!-- <footer class="botnavbar flexcontainer"> -->
   <div class="botnavbar flexcontainer">
     <ul class="botnavleft">
       <li>Advertising</li>
@@ -72,9 +71,12 @@
       <li>Settings</li>
     </ul>
   </div>
+  <!-- </footer> -->
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="js/script.js"></script>
+
+  <!-- Como você ainda não tem nenhum arquivo de JavaScript eu tiraria/comentaria o jQuery e a chamada para o script.js. O jQuery não está sendo usado ainda, e com essa chamada ele tá carregando um monte de código JS desnecessário. E o script.js sendo chamado ali fala pro browser procurar esse arquivo, mas ele não existe, e acaba dando erro: https://imgur.com/9dZB8xA. -->
 </body>
 
 </html>
