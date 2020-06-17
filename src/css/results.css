@@ -1,0 +1,121 @@
+html {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.gridcontainer {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 180px 650px 60px 455px 1fr ;
+    grid-template-rows: 123px 43px 1fr 121px;
+    grid-template-areas: 
+    "logo headergrid headergrid headergrid headergrid"
+    "gap gap gap gap gap"
+    ". results1 . results2 ."
+    "footer footer footer footer footer";
+}
+
+.flexcontainer {
+    display: flex;
+}
+
+.logo img {
+    grid-area: logo;
+    width: 92px;
+    height: 30px;
+    padding-top: 28px;
+    padding-left: 23px;
+}
+
+.header {
+    grid-area: headergrid;
+    display: flex;
+}
+
+.searchbar {
+    display: flex;
+    align-items: center;
+    border: 1px solid #d3d3d3;
+    border-radius: 30px;
+    overflow: hidden;
+    margin-top: 20px;
+    width: 690px;
+    margin-left: -20px;
+}
+
+input {
+    width: 580px;
+    line-height: 1;
+    border: none;
+    padding: 13px 0px 13px 13px;
+    margin-left: 10px;
+}
+
+input:focus {
+    border: none;
+    outline: none;
+}
+
+.searchbar:hover {
+    box-shadow: 0px 0px 1px 2px #d6d6d67a;
+}
+
+#close {
+    fill: #979CA0;
+    height: 25px;
+    width: 25px;
+    padding: 0px 11px 0px 17px;
+}
+
+#searchicon {
+    fill: #4285F4;
+    height: 24px;
+    width: 24px;
+    padding-left: 4px;
+}
+
+.menu li {
+    list-style-type: none;
+    display: inline-block;
+    position: relative;
+}
+
+#results:before {
+    content: "";
+    background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='Layer_1' focusable='false' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 24 24' style='enable-background:new 0 0 24 24;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:%2334A853;%7D .st1%7Bfill:%23EA4335;%7D .st2%7Bfill:%23FBBC04;%7D .st3%7Bfill:%234285F4;%7D%0A%3C/style%3E%3Cpath class='st0' d='M10,2v2c3.3,0,6,2.7,6,6h2C18,5.6,14.4,2,10,2'/%3E%3Cpath class='st1' d='M10,4V2c-4.4,0-8,3.6-8,8h2C4,6.7,6.7,4,10,4'/%3E%3Cpath class='st2' d='M4,10H2c0,4.4,3.6,8,8,8v-2C6.7,16,4,13.3,4,10'/%3E%3Cpath class='st3' d='M22,20.6l-5.7-5.7c1.1-1.4,1.7-3.1,1.7-4.9h-2c0,3.3-2.7,6-6,6v2c1.9,0,3.5-0.6,4.9-1.7l5.7,5.7L22,20.6'/%3E%3C/svg%3E");
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    top: 1px;
+    left: 1px;
+}
+
+#imgresults::before {
+    height: 16px;
+    width: 16px;
+}
+
+#vidresults::before {
+    height: 16px;
+    width: 16px;
+}
+
+#mapresults::before {
+    height: 16px;
+    width: 16px;
+}
+
+#shopresults::before {
+    height: 16px;
+    width: 16px;
+}
+
+#moreoptions::before {
+    height: 16px;
+    width: 16px;
+}
+

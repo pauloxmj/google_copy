@@ -21,13 +21,13 @@ html {
 }
 
 .topnavbar li {
-    display: inline;
+    display: inline-block;
     /* dificilmente ainda precisamos usar display: inline. Nesse caso eu optaria por display: inline-block; O inline-block faz com que você possa utilizar tamanhos(altura e comprimento), e a margin, que você usou na propriedade aqui em baixo, vai ser aplicada em todos os lados. O inline não pega altura, comprimento e a margin só pega dos lados. */
     margin: 8px;
 }
 
 .botnavbar li {
-    display: inline;
+    display: inline-block;
     margin: 10px;
 }
 
@@ -169,4 +169,3 @@ input:focus {
     margin: 0;
     padding: 10px;
 }
-
